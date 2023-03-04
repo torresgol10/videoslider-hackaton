@@ -1,0 +1,57 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="h-full flex flex-col items-center justify-start md:justify-center bg-white text-black">
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root {
+		--primary: #FF2525;
+		--secondary: #FFE53B;
+		--gradient: linear-gradient(
+			45deg,
+			var(--primary),
+			var(--secondary) 30%,
+			white 60%
+		);
+	}
+	body {
+		font-family: 'Montserrat', sans-serif;
+	}
+	.text-gradient {
+		background-image: var(--gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.btn {
+		background-image: var(--gradient);
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.dz-preview {
+		z-index: 2 !important;
+	}
+</style>
