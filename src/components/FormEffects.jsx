@@ -4,11 +4,8 @@ import { useForm } from "react-hook-form";
 const transitions = ["BookFlip", "Bounce", "BowTieHorizontal", "BowTieVertical", "BowTieWithParameter", "ButterflyWaveScrawler", "CircleCrop", "ColourDistance", "CrazyParametricFun", "CrossZoom", "Directional", "DoomScreenTransition", "Dreamy", "DreamyZoom", "FilmBurn", "GlitchDisplace", "GlitchMemories", "GridFlip", "InvertedPageCurl", "LeftRight", "LinearBlur", "Mosaic", "Overexposure", "PolkaDotsCurtain", "Radial", "SimpleZoom", "StereoViewer", "Swirl", "TVStatic", "TopBottom", "WaterDrop", "ZoomInCircles", "ZoomLeftWipe", "ZoomRigthWipe", "angular", "burn", "cannabisleaf", "circle", "circleopen", "colorphase", "coord-from-in", "crosshatch", "crosswarp", "cube", "directional-easing", "directionalwarp", "directionalwipe", "displacement", "doorway", "fade", "fadecolor", "fadegrayscale", "flyeye", "heart", "hexagonalize", "kaleidoscope", "luma", "luminance_melt", "morph", "mosaic_transition", "multiply_blend", "perlin", "pinwheel", "pixelize", "polar_function", "powerKaleido", "randomNoisex", "randomsquares", "ripple", "rotateTransition", "rotate_scale_fade", "scale-in", "squareswire", "squeeze", "swap", "tangentMotionBlur",
 	"undulatingBurnOut", "wind", "windowblinds", "windowslice", "wipeDown", "wipeLeft", "wipeRight", "wipeUp"]
 
-export default function FormEffects() {
+export default function FormEffects({onSubmit}) {
 	const { register, handleSubmit } = useForm();
-	const { generateVideo } = useGenerateVideo();
-
-	const onSubmit = (data) => generateVideo({ videoOptions: data });
 
 	return (
 		<form
