@@ -1,36 +1,23 @@
 ---
-import CloudinaryLogo from "../components/CloudinaryLogo.astro";
 import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="Vectorize Image">
-	<header
-		class="w-full max-w-5xl relative md:absolute top-0 flex items-center justify-between px-6 xl:px-0 py-3 mb-10 border-b-[1px] border-gray-100"
-	>
-		<h1 class="text-2xl md:text-3xl font-bold">
-			Cloud<span class="text-gradient">VideoSlider</span>
-		</h1>
-		<ul class="flex gap-8 m-0">
-			<li>
-				<a
-					href="mailto:torresgol10.it@gmail.com"
-					class="text-gray-500 hover:text-violet-500">Contact</a
-				>
-			</li>
-		</ul>
-	</header>
+	<Header />
 	<main class="w-full max-w-5xl">
 		<div
 			class="w-full flex flex-col lg:flex-row items-start justify-between gap-8 px-6 xl:px-0"
 		>
 			<div
-				class="flex flex-col lg:flex-col items-center lg:items-start md:max-w-3xl lg:max-w-lg"
+				class="flex flex-col lg:flex-col items-center lg:items-start w-full lg:max-w-lg"
 			>
 				<picture
 					class="w-full aspect-video overflow-hidden rounded-[2rem] mb-5"
 				>
 					<img
-						class="object-cover"
+						class="w-full h-full object-cover"
 						src="edit.jpg"
 						alt="Create VideoSlider"
 					/>
@@ -124,16 +111,7 @@ import Layout from "../layouts/Layout.astro";
 			</div>
 		</div>
 	</main>
-	<footer
-		class="w-full max-w-5xl relative md:absolute bottom-0 flex justify-center items-center gap-x-2 px-6 xl:px-0 py-3 mt-10 font-semibold"
-	>
-		Built with <a
-			href="https://cloudinary.com"
-			target="_blank"
-			rel="noreferrer"
-			><CloudinaryLogo />
-		</a>
-	</footer>
+	<Footer />
 </Layout>
 
 <style>
