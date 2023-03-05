@@ -1,0 +1,34 @@
+.dropzone-form * {
+    position: relative;
+    z-index: 2;
+}
+.dropzone-form::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+    background-color: #ffeeee;
+}
+.dropzone-form::after {
+    content: "";
+    position: absolute;
+    top: 1.5rem;
+    left: -1.5rem;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+    background-image: radial-gradient(currentColor 1px, transparent 1px);
+    background-size: 10px 10px;
+    color: var(--primary);
+}
+@media (min-width: 1024px) {
+    .dropzone-form::after {
+        top: 2rem;
+        left: -2rem;
+    }
+}

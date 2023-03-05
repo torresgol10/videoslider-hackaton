@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #FF2525;
+  --secondary: #FFE53B;
+  --gradient: linear-gradient(
+    45deg,
+    var(--primary),
+    var(--secondary) 30%,
+    white 60%
+  );
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.text-gradient {
+  background-image: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 400%;
+  background-position: 0%;
+}
+
+.btn {
+  background-image: var(--gradient);
+  background-size: 400%;
+  background-position: 0%;
+}
+
+.dz-preview {
+  z-index: 2 !important;
+}
+
+.cls-1 {
+  fill: #3448c5;
+}
